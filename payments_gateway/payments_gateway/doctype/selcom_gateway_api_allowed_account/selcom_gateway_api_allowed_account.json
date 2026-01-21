@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2025-05-06 00:00:00.000000",
+ "creation": "2025-05-06 00:00:00",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -18,12 +18,14 @@
   }
  ],
  "istable": 1,
- "modified": "2025-05-06 00:00:00.000000",
+ "links": [],
+ "modified": "2026-01-21 04:41:10.792090",
  "modified_by": "Administrator",
  "module": "Payments Gateway",
  "name": "Selcom Gateway API Allowed Account",
  "owner": "Administrator",
  "permissions": [],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "format:SGT-{YYYY}-{MM}-{DD}-{#####}",
- "creation": "2025-05-06 00:00:00.000000",
+ "creation": "2025-05-06 00:00:00",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -144,7 +144,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-06 00:00:00.000000",
+ "modified": "2026-01-21 04:40:50.846815",
  "modified_by": "Administrator",
  "module": "Payments Gateway",
  "name": "Selcom Gateway Transaction",
@@ -164,6 +164,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
