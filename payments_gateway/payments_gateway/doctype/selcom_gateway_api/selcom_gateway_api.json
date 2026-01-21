@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SELAPI-{#####}",
+ "creation": "2025-05-06 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "api_key",
+  "api_secret",
+  "enabled",
+  "expiry_date",
+  "daily_limit",
+  "monthly_limit",
+  "allowed_accounts"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "API Key",
+   "unique": 1
+  },
+  {
+   "fieldname": "api_secret",
+   "fieldtype": "Password",
+   "label": "API Secret"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "daily_limit",
+   "fieldtype": "Int",
+   "label": "Daily Limit"
+  },
+  {
+   "default": "0",
+   "fieldname": "monthly_limit",
+   "fieldtype": "Int",
+   "label": "Monthly Limit"
+  },
+  {
+   "description": "Select the Selcom accounts that can be used with this API key",
+   "fieldname": "allowed_accounts",
+   "fieldtype": "Table MultiSelect",
+   "label": "Allowed Accounts",
+   "options": "Selcom Gateway API Allowed Account"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-06 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Payments Gateway",
+ "name": "Selcom Gateway API",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

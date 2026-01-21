@@ -1,0 +1,167 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:account_name",
+ "creation": "2025-05-06 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "account_name",
+  "enabled",
+  "base_url",
+  "vendor",
+  "api_key",
+  "api_secret",
+  "pin",
+  "section_break_limits",
+  "currency",
+  "min_amount",
+  "max_amount",
+  "section_break_usage",
+  "success_count",
+  "failed_count",
+  "total_amount",
+  "last_used_on",
+  "section_break_users",
+  "account_users"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "base_url",
+   "fieldtype": "Data",
+   "label": "Base URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vendor",
+   "fieldtype": "Data",
+   "label": "Vendor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_secret",
+   "fieldtype": "Password",
+   "label": "API Secret",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pin",
+   "fieldtype": "Password",
+   "label": "PIN"
+  },
+  {
+   "fieldname": "section_break_limits",
+   "fieldtype": "Section Break",
+   "label": "Limits"
+  },
+  {
+   "default": "TZS",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "min_amount",
+   "fieldtype": "Currency",
+   "label": "Minimum Amount"
+  },
+  {
+   "fieldname": "max_amount",
+   "fieldtype": "Currency",
+   "label": "Maximum Amount"
+  },
+  {
+   "fieldname": "section_break_usage",
+   "fieldtype": "Section Break",
+   "label": "Usage"
+  },
+  {
+   "default": "0",
+   "fieldname": "success_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Success Count",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "failed_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Failed Count",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_used_on",
+   "fieldtype": "Datetime",
+   "label": "Last Used On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_users",
+   "fieldtype": "Section Break",
+   "label": "Account Users"
+  },
+  {
+   "fieldname": "account_users",
+   "fieldtype": "Table",
+   "label": "Users",
+   "options": "Selcom Gateway Account User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-06 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Payments Gateway",
+ "name": "Selcom Gateway Account",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

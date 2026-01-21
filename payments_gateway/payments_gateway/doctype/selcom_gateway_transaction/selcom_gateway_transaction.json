@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SGT-{YYYY}-{MM}-{DD}-{#####}",
+ "creation": "2025-05-06 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_datetime",
+  "api_key",
+  "user",
+  "account",
+  "transid",
+  "utilityref",
+  "msisdn",
+  "amount",
+  "currency",
+  "status",
+  "resultcode",
+  "result",
+  "reference",
+  "message",
+  "attempts",
+  "section_break_payload",
+  "request_payload",
+  "response_payload"
+ ],
+ "fields": [
+  {
+   "default": "now",
+   "fieldname": "posting_datetime",
+   "fieldtype": "Datetime",
+   "label": "Posting Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "API Key",
+   "options": "Selcom Gateway API",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "api_key.user",
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account",
+   "options": "Selcom Gateway Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transid",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Trans ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "utilityref",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Utility Reference",
+   "reqd": 1
+  },
+  {
+   "fieldname": "msisdn",
+   "fieldtype": "Data",
+   "label": "MSISDN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "default": "PENDING",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "PENDING\nINPROGRESS\nAMBIGUOUS\nSUCCESS\nFAILED",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resultcode",
+   "fieldtype": "Data",
+   "label": "Result Code"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Data",
+   "label": "Result"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text",
+   "label": "Message"
+  },
+  {
+   "default": "0",
+   "fieldname": "attempts",
+   "fieldtype": "Int",
+   "label": "Attempts"
+  },
+  {
+   "fieldname": "section_break_payload",
+   "fieldtype": "Section Break",
+   "label": "Payloads"
+  },
+  {
+   "fieldname": "request_payload",
+   "fieldtype": "JSON",
+   "label": "Request Payload"
+  },
+  {
+   "fieldname": "response_payload",
+   "fieldtype": "JSON",
+   "label": "Response Payload"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-06 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Payments Gateway",
+ "name": "Selcom Gateway Transaction",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
